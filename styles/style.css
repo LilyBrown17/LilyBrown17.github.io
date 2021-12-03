@@ -88,6 +88,7 @@ nav{
 .video{
     height: 100%;
     grid-area: 2/6/3/7;
+    display: block;
 }
 #right-button{
     grid-area: 2/9/3/11;
@@ -213,4 +214,28 @@ nav{
 }
 #list-line{
     grid-area: 2/3/3/4;
+}
+
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  grid-area: 2/6/3/7;
+  position: relative;
+  max-width: 300px;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  transition: .5s ease;
+  opacity:0;
+  color: #F97D10;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
 }
